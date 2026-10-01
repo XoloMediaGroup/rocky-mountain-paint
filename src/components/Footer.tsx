@@ -1,11 +1,11 @@
-import { site } from "../data/site"
+import { site, photo } from "../data/site"
 
 export function Footer() {
   return (
     <footer className="bg-navy-deep text-paper">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-4">
         <div className="md:col-span-2">
-          <img src="/images/logo.png" alt="" className="h-14 w-auto rounded-md bg-paper px-2 py-1" />
+          <img src={photo("/images/logo.png")} alt="" className="h-14 w-auto rounded-md bg-paper px-2 py-1" />
           <p className="mt-5 max-w-md text-sm leading-relaxed text-paper/70">
             Licensed and insured painting and remodeling across Utah. Interior, exterior stain,
             lacquer, epoxy floors, and clear coat — done on time, done right.

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { site } from "../data/site"
+import { site, photo } from "../data/site"
 import type { Page } from "../lib/pages"
 
 const links: { href: Page; label: string }[] = [
@@ -40,7 +40,7 @@ export function Header({ page }: { page: Page }) {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
         <a href="#home" className="shrink-0">
           <img
-            src="/images/logo.png"
+            src={photo("/images/logo.png")}
             alt="Rocky Mountain Paint LLC"
             className="h-12 w-auto rounded-md bg-paper px-2 py-1 sm:h-14"
           />
