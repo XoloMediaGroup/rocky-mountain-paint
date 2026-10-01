@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
-import { gallery, reasons, reviews, services, site } from "../data/site"
+import { gallery, reasons, reviews, services, site, photo } from "../data/site"
 
 const heroShots = [
-  "/images/hero-1.jpg",
-  "/images/hero-2.jpg",
-  "/images/hero-3.jpg",
-  "/images/hero-4.jpg",
+  photo("/images/hero-1.jpg"),
+  photo("/images/hero-2.jpg"),
+  photo("/images/hero-3.jpg"),
+  photo("/images/hero-4.jpg"),
 ]
 
 export function HomePage() {
@@ -77,8 +77,8 @@ export function HomePage() {
             </a>
           </div>
           <div className="grid grid-cols-2 gap-3">
-            <img src="/images/gallery-2.jpg" alt="Finished exterior" className="h-56 w-full rounded-xl object-cover sm:h-72" />
-            <img src="/images/crew.jpg" alt="Painter on the job" className="mt-8 h-56 w-full rounded-xl object-cover sm:h-72" />
+            <img src={photo("/images/gallery-2.jpg")} alt="Finished exterior" className="h-56 w-full rounded-xl object-cover sm:h-72" />
+            <img src={photo("/images/crew.jpg")} alt="Painter on the job" className="mt-8 h-56 w-full rounded-xl object-cover sm:h-72" />
           </div>
         </div>
       </section>
@@ -159,7 +159,7 @@ export function HomePage() {
       <section className="bg-sand">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 py-20 lg:grid-cols-2">
           <img
-            src="/images/project-interior.jpg"
+            src={photo("/images/project-interior.jpg")}
             alt="Interior remodel and paint"
             className="h-full max-h-[32rem] w-full rounded-2xl object-cover"
           />
